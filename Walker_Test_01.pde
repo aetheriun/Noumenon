@@ -1,4 +1,8 @@
-Walker w; // defines the walker
+Walker a; // defines the walker
+Walker b;
+Walker c;
+Walker d;
+Walker e;
 
 int size = 30; // initial size of the walker
 boolean grow = true; // the size growth for the walker
@@ -11,13 +15,25 @@ color from = color(255, 246, 106); //desired yellow colour
 
 void setup() {
   size(500, 500);
-  w = new Walker(); //creates the walker object
+  a = new Walker(); //creates the walker object
+  b = new Walker(); 
+  c = new Walker(); 
+  d = new Walker(); 
+  e = new Walker(); 
   background(255);
 }
 
 void draw() {
-  w.step(); // moves the walker object
-  w.render();  // renders the walker object at the new position
+  a.step(); // moves the walker object
+  a.render();  // renders the walker object at the new position
+  b.step();
+  b.render();
+  c.step();
+  c.render();
+  d.step();
+  d.render();
+  e.step();
+  e.render();
 }
 
 void keyPressed(){
@@ -61,9 +77,9 @@ class Walker { //creating the walker class
     }
     
     if (turnBlue == true) {
-      currentColor = currentColor+0.01;
+      currentColor = currentColor+0.001;
     } else if (turnBlue == false) {
-      currentColor = currentColor-0.01;
+      currentColor = currentColor-0.001;
     }
   }
 
