@@ -26,7 +26,7 @@ class Walker {
 
   void render() {
     //noStroke();
-   // fill(0);
+    //fill(0);
     ellipse(x,y,20,20);
     // stroke(0);
     // strokeWeight(2);
@@ -35,20 +35,20 @@ class Walker {
 
   void step() {
     int choice = int(random(4));
-    int dist = int(random(10));
+    int dist = int(random(5));
     
     if (choice == 0) {
-      x++;
-     // x = x+dist;
+      // x++;
+      x = x+dist;
     } else if(choice == 1){
-      x--;
-      //x = x-dist;
+      //x--;
+      x = x-dist;
     } else if (choice == 2){
-      y++;
-     // y = y+dist;
+      //y++;
+      y = y+dist;
     } else {
-      y--;
-     // y = y-dist;
+      //y--;
+      y = y-dist;
     }
   }
 }
