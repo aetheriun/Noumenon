@@ -1,4 +1,6 @@
 Walker w;
+int s = 30;
+boolean grow = true;
 
 void setup() {
   size(500, 500);
@@ -20,18 +22,24 @@ class Walker {
   int y;
   
   Walker() {
-    x = width/2;
-    y = height/2;
+    x = (width/2);
+    y = (height/2);
   }
 
   void render() {
-    //noStroke();
-    //fill(0);
-    ellipse(x,y,20,20);
-    // stroke(0);
-    // strokeWeight(2);
-    // point(x,y);
-  }
+    ellipse(x,y,s,s);
+    if (s<=20) {
+      grow = true;
+      } else if (s>=40) {
+        grow = false;
+      }
+      
+     if (grow== true){
+       s++;
+     } else {
+       s--;
+     }
+    }
 
   void step() {
     int choice = int(random(4));
